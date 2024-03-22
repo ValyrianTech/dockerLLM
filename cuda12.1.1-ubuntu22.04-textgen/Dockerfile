@@ -22,7 +22,9 @@ RUN git clone https://github.com/oobabooga/text-generation-webui && \
     git clone https://github.com/turboderp/exllama && \
     pip3 install -r exllama/requirements.txt && \
     # upgrade safetensors to latest version because the previous line installs an old version
-    pip3 install --upgrade safetensors
+    pip3 install --upgrade safetensors && \
+    pip3 install flash_attn==2.5.5
+
 
 # Install AutoGPTQ, overwriting the version automatically installed by text-generation-webui
 # May not be needed any more? But just in case
