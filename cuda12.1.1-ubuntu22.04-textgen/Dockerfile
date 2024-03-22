@@ -1,7 +1,7 @@
 ARG CUDA_VERSION="12.1.1"
 ARG CUDNN_VERSION="8"
 ARG UBUNTU_VERSION="22.04"
-ARG DOCKER_FROM=thebloke/cuda$CUDA_VERSION-ubuntu$UBUNTU_VERSION-pytorch:latest 
+ARG DOCKER_FROM=valyriantech/cuda$CUDA_VERSION-ubuntu$UBUNTU_VERSION-pytorch:latest
 
 # Base pytorch image
 FROM $DOCKER_FROM as base

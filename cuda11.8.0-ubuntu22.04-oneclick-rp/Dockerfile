@@ -3,7 +3,7 @@ ARG CUDNN_VERSION="8"
 ARG UBUNTU_VERSION="22.04"
 
 # Base image
-FROM thebloke/cuda$CUDA_VERSION-ubuntu$UBUNTU_VERSION-oneclick:latest as base
+FROM valyriantech/cuda$CUDA_VERSION-ubuntu$UBUNTU_VERSION-oneclick:latest as base
 
 RUN pip3 install runpod requests
 
