@@ -28,5 +28,5 @@ RUN git clone https://github.com/oobabooga/text-generation-webui && \
 
 # Install AutoGPTQ, overwriting the version automatically installed by text-generation-webui
 # May not be needed any more? But just in case
-#RUN pip3 uninstall -y auto-gptq && \
-#    pip3 install auto-gptq --extra-index-url https://huggingface.github.io/autogptq-index/whl/cu118/
+RUN pip3 uninstall -y auto-gptq && \
+    pip3 install auto-gptq --extra-index-url https://huggingface.github.io/autogptq-index/whl/cu118/
