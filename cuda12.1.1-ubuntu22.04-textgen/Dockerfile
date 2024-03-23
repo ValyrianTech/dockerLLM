@@ -25,7 +25,8 @@ RUN git clone https://github.com/oobabooga/text-generation-webui && \
     pip3 install --upgrade safetensors && \
     # install older version of flash_attn and transformers because the latest versions break the template
     pip3 install flash_attn==2.5.5 && \
-    pip3 install transformers==4.37.2
+    pip3 install transformers==4.37.2 && \
+    pip3 install exllamav2==0.0.15
 
 
 # Install AutoGPTQ, overwriting the version automatically installed by text-generation-webui
