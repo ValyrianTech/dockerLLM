@@ -29,7 +29,7 @@ RUN git clone https://github.com/oobabooga/text-generation-webui && \
     pip3 install exllamav2==0.0.15 && \
     # I don't know why but instead of version 0.0.15, it is version 0.0.15+cu121 that gets installed, which is not what we want, but uninstalling it and installing 0.0.15 a second time fixes it
     pip3 uninstall -y exllama && \
-    pip3 install exllamav2==0.0.15 && \
+    pip3 install exllamav2==0.0.15
 
 
 # Install AutoGPTQ, overwriting the version automatically installed by text-generation-webui
