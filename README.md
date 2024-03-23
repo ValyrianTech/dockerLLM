@@ -1,4 +1,10 @@
-# TheBloke's Docker templates
+# Text-generation-webui Docker templates
+
+### Update: 23 March 2024
+* I forked the oneclick template repository (https://github.com/TheBlokeAI/dockerLLM) as TheBloke seems to have stopped updating it and it broke.
+* I have updated the template to use my forked repository, which should now work again.
+* Since the original repository is no longer maintained, I will be updating this forked repository with new features and fixes as needed.
+* New repo: https://github.com/ValyrianTech/dockerLLM
 
 ### Update: 16 December 2023 - Rebuild to add Mixtral support
 * Should now support Mixtral, with updated AutoGPTQ 0.6 and llama-cpp-python 0.2.23
@@ -38,14 +44,5 @@
 * Automatic model download and loading via environment variable `MODEL`.
 * Pass text-generation-webui parameters via environment variable `UI_ARGS`.
 
-## Runpod: TheBloke's Local LLMs UI
-
-[Runpod template link](https://runpod.io/gsc?template=qk29nkmbfr&ref=eexqfacd)
-
-[Full documentation is available here](https://github.com/TheBlokeAI/dockerLLM/blob/main/README_Runpod_LocalLLMsUI.md)
-
-## Runpod: TheBloke's Local LLMs UI & API
-
-[Runpod template link](https://runpod.io/gsc?template=f1pf20op0z&ref=eexqfacd)
 
 [Full documentation is available here](https://github.com/TheBlokeAI/dockerLLM/blob/main/README_Runpod_LocalLLMsUIandAPI.md)
