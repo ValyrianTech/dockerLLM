@@ -1,5 +1,12 @@
 # Text-generation-webui Docker templates
 
+### Update: 24 March 2024
+* For future reference, the changes needed to get the template working again were:
+* Updating safetensors to latest version
+* Downgrading flash_attn to 2.5.5
+* Downgrading transformers to 4.37.2
+* Updating exllamav2 to 0.0.16 (but without updating dependencies)
+
 ### Update: 23 March 2024
 * I forked the oneclick template repository (https://github.com/TheBlokeAI/dockerLLM) as TheBloke seems to have stopped updating it and it broke.
 * I have updated the template to use my forked repository, which should now work again.
