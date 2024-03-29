@@ -1,5 +1,9 @@
 # Text-generation-webui Docker templates
 
+### Update: 29 March 2024
+* Updated gradio to latest version (4.23.0)
+* Updated transformers to latest version (4.39.2)
+
 ### Update: 24 March 2024
 * For future reference, the changes needed to get the template working again were:
 * Updating safetensors to latest version
