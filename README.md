@@ -6,7 +6,7 @@
 * Changed docker image name to 'valyriantech/text-generation-webui-oneclick-UI-and-API' to avoid confusion
 * Changed default behaviour of the startup script to no longer automatically update text-generation-webui and exllama on starting the template because I'm tired of having this template break every few weeks.
 * If you still want to have the latest version, you can add and environment variable `UI_UPDATE` with value `true` when deploying the template on Runpod.
-* Change transformers back to version 4.37.2 because AutoGPTQ is broken with the latest version.
+* Changed transformers back to version 4.37.2 because AutoGPTQ is broken with the latest version.
 * Docker image no longer uses the latest state of the repository, but a specific commit that is known to work. This should prevent the template from breaking in the future.
 
 ### Update: 29 March 2024
