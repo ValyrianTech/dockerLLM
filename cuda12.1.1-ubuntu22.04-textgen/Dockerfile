@@ -28,7 +28,8 @@ RUN git clone https://github.com/oobabooga/text-generation-webui && \
     # install older version of flash_attn and transformers because the latest versions break the template
     pip3 install flash_attn==2.5.5 && \
     pip3 install --upgrade gradio && \
-    pip3 install --upgrade transformers && \
+    # install older version of transformers because the latest version is incompatible with AutoGPTQ
+    pip3 install transformers==4.37.2 && \
     # upgrade exllama to latest version without upgrading its dependencies because it causes the image to blow up in size and breaks the template
     pip3 install --upgrade --no-deps exllamav2
 
