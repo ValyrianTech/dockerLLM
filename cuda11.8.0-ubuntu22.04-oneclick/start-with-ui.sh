@@ -33,11 +33,14 @@ if [[ $MODEL ]]; then
 	"$SCRIPTDIR"/fetch-model.py "$MODEL" $VOLUME/text-generation-webui/models >>$VOLUME/logs/fetch-model.log 2>&1
 fi
 
-# Update text-generation-webui to the latest commit
-cd /workspace/text-generation-webui && git pull
+# If passed a UI_UPDATE variable from Runpod template, update the UI, don't do this by default as it can break things
+if [[ ${UI_UPDATE} ]]; then
+  # Update text-generation-webui to the latest commit
+  cd /workspace/text-generation-webui && git pull
 
-# Update exllama to the latest commit
-cd /workspace/text-generation-webui/repositories/exllama && git pull
+  # Update exllama to the latest commit
+  cd /workspace/text-generation-webui/repositories/exllama && git pull
+fi
 
 # Move the script that launches text-gen to $VOLUME, so users can make persistent changes to CLI arguments
 if [[ ! -f $VOLUME/run-text-generation-webui.sh ]]; then
