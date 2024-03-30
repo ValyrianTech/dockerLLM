@@ -14,6 +14,8 @@ WORKDIR /root
 # so we're always up-to-date with any ExLlama changes, which will auto compile its own extension
 RUN git clone https://github.com/oobabooga/text-generation-webui && \
     cd text-generation-webui && \
+    # checkout a specific commit to avoid breaking changes in the future
+    git checkout e0e28ec && \
     pip3 install -r requirements.txt && \
     bash -c 'for req in extensions/*/requirements.txt ; do pip3 install -r "$req" ; done' && \
     #pip3 uninstall -y exllama && \
