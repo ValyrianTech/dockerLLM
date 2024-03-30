@@ -3,7 +3,7 @@
 [Full documentation is available here](https://github.com/ValyrianTech/dockerLLM/blob/main/README_Runpod_LocalLLMsUIandAPI.md)
 
 ### Update: 30 March 2024
-* Changed docker image name to 'valyriantech/text-generation-webui-oneclick-UI-and-API' to avoid confusion
+* Changed docker image name to 'valyriantech/text-generation-webui-oneclick-ui-and-api' to avoid confusion
 * Changed default behaviour of the startup script to no longer automatically update text-generation-webui and exllama on starting the template because I'm tired of having this template break every few weeks.
 * If you still want to have the latest version, you can add and environment variable `UI_UPDATE` with value `true` when deploying the template on Runpod.
 * Changed transformers back to version 4.37.2 because AutoGPTQ is broken with the latest version.
