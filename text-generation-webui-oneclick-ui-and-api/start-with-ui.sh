@@ -33,8 +33,12 @@ if [[ $MODEL ]]; then
 	"$SCRIPTDIR"/fetch-model.py "$MODEL" $VOLUME/text-generation-webui/models >>$VOLUME/logs/fetch-model.log 2>&1
 fi
 
+# Checkout a specific commit of text-generation-webui that is known to work
+cd /workspace/text-generation-webui && git checkout 7cf1402
+
 # If passed a UI_UPDATE variable from Runpod template, update the UI, don't do this by default as it can break things
 if [[ ${UI_UPDATE} ]]; then
+  echo "Updating text-generation-webui and exllama"
   # Update text-generation-webui to the latest commit
   cd /workspace/text-generation-webui && git pull
 
