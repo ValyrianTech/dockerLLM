@@ -42,7 +42,7 @@ today_tag = datetime.datetime.now().strftime("%d%m%Y")
 try:
     pytorch_container = build("cuda12.1.1-ubuntu22.04-pytorch", "1")
     textgen_container = build("cuda12.1.1-ubuntu22.04-textgen", today_tag, pytorch_container)
-    oneclick_container = build("cuda11.8.0-ubuntu22.04-oneclick", today_tag, textgen_container)
+    oneclick_container = build("text-generation-webui-oneclick-UI-and-API", today_tag, textgen_container)
 
     logger.info(f"Successfully built and pushed {oneclick_container}")
 except subprocess.CalledProcessError as e:

@@ -56,4 +56,4 @@
 * Pass text-generation-webui parameters via environment variable `UI_ARGS`.
 
 
-[Full documentation is available here](https://github.com/TheBlokeAI/dockerLLM/blob/main/README_Runpod_LocalLLMsUIandAPI.md)
+[Full documentation is available here](https://github.com/ValyrianTech/dockerLLM/blob/main/README_Runpod_LocalLLMsUIandAPI.md)
