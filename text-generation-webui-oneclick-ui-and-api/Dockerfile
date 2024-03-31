@@ -31,7 +31,7 @@ COPY conf-files/iterm2_shell_integration.zsh /root/.iterm2_shell_integration.zsh
 # Set default shell to ZSH
 COPY conf-files/passwd /etc/passwd
 
-COPY scripts /root/scripts
+COPY --chmod=755 scripts /root/scripts
 
 COPY --chmod=755 start-with-ui.sh /start.sh
 
