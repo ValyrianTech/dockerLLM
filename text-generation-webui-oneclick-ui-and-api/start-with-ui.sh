@@ -36,14 +36,29 @@ fi
 # Checkout a specific commit of text-generation-webui that is known to work
 cd /workspace/text-generation-webui && git checkout 7cf1402
 
-# If passed a UI_UPDATE variable from Runpod template, update the UI, don't do this by default as it can break things
+# If UI_UPDATE is passed from the Runpod template
 if [[ ${UI_UPDATE} ]]; then
-  echo "Updating text-generation-webui and exllama"
-  # Update text-generation-webui to the latest commit
-  cd /workspace/text-generation-webui && git pull
-
-  # Update exllama to the latest commit
-  cd /workspace/text-generation-webui/repositories/exllama && git pull
+  # Check if UI_UPDATE is 'true' for a general update
+  if [[ ${UI_UPDATE} == "true" ]]; then
+    echo "Updating text-generation-webui to the latest commit" && \
+    git pull origin main && \
+    pip install -r requirements.txt --no-deps && \
+    pip install transformers -U && \
+    pip install gradio -U && \
+    pip install exllamav2 -U --no-deps && \
+    pip install flash_attn -U --no-deps
+  # If UI_UPDATE is a commit hash, checkout that specific hash
+  elif [[ ${UI_UPDATE} =~ ^[a-f0-9]{40}$ ]]; then # regex to match a SHA-1 hash
+    echo "Checking out specific commit: $UI_UPDATE" && \
+    git checkout ${UI_UPDATE} && \
+    pip install -r requirements.txt --no-deps && \
+    pip install transformers -U && \
+    pip install gradio -U && \
+    pip install exllamav2 -U --no-deps && \
+    pip install flash_attn -U --no-deps
+  else
+    echo "ERROR: Invalid UI_UPDATE value. It must be 'true' or a valid git commit hash."
+  fi
 fi
 
 # Move the script that launches text-gen to $VOLUME, so users can make persistent changes to CLI arguments
