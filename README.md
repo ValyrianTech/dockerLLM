@@ -6,6 +6,7 @@
 * Fixed the `UI_UPDATE` environment variable to actually work, however this experimental feature is not recommended for production use.
 * When `UI_UPDATE` is set to `true`, the template will now update text-generation-webui to the latest version.
 * You can also set `UI_UPDATE` to a specific commit hash to update to a specific version.
+* Do keep in mind this will add an extra 2-3 minutes to the startup time of the template.
 
 ### Update: 30 March 2024
 * Changed docker image name to 'valyriantech/text-generation-webui-oneclick-ui-and-api' to avoid confusion
