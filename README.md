@@ -2,6 +2,11 @@
 
 [Full documentation is available here](https://github.com/ValyrianTech/dockerLLM/blob/main/README_Runpod_LocalLLMsUIandAPI.md)
 
+### Update: 28 April 2024
+* Fixed the `UI_UPDATE` environment variable to actually work, however this experimental feature is not recommended for production use.
+* When `UI_UPDATE` is set to `true`, the template will now update text-generation-webui to the latest version.
+* You can also set `UI_UPDATE` to a specific commit hash to update to a specific version.
+
 ### Update: 30 March 2024
 * Changed docker image name to 'valyriantech/text-generation-webui-oneclick-ui-and-api' to avoid confusion
 * Changed default behaviour of the startup script to no longer automatically update text-generation-webui and exllama on starting the template because I'm tired of having this template break every few weeks.
