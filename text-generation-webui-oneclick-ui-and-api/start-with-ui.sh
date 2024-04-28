@@ -41,6 +41,7 @@ if [[ ${UI_UPDATE} ]]; then
   # Check if UI_UPDATE is 'true' for a general update
   if [[ ${UI_UPDATE} == "true" ]]; then
     echo "Updating text-generation-webui to the latest commit" && \
+    cd /workspace/text-generation-webui && \
     git pull origin main && \
     pip install -r requirements.txt --no-deps && \
     pip install transformers -U && \
@@ -50,6 +51,7 @@ if [[ ${UI_UPDATE} ]]; then
   # If UI_UPDATE is a commit hash, checkout that specific hash
   elif [[ ${UI_UPDATE} =~ ^[a-f0-9]{7,40}$ ]]; then # regex to match a SHA-1 hash between 7 and 40 characters
     echo "Checking out specific commit: $UI_UPDATE" && \
+    cd /workspace/text-generation-webui && \
     git checkout ${UI_UPDATE} && \
     pip install -r requirements.txt --no-deps && \
     pip install transformers -U && \
