@@ -48,7 +48,7 @@ if [[ ${UI_UPDATE} ]]; then
     pip install exllamav2 -U --no-deps && \
     pip install flash_attn -U --no-deps
   # If UI_UPDATE is a commit hash, checkout that specific hash
-  elif [[ ${UI_UPDATE} =~ ^[a-f0-9]{40}$ ]]; then # regex to match a SHA-1 hash
+  elif [[ ${UI_UPDATE} =~ ^[a-f0-9]{7,40}$ ]]; then # regex to match a SHA-1 hash between 7 and 40 characters
     echo "Checking out specific commit: $UI_UPDATE" && \
     git checkout ${UI_UPDATE} && \
     pip install -r requirements.txt --no-deps && \
