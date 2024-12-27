@@ -3,7 +3,7 @@ NOTE: this template is outdated and no longer maintained. Please refer to the ne
 There is a brand new template available for **text-generation-webui v2.0** with many new features and improvements. 
 
 Please use the new template instead of this one.
-You can deploy the new template called 'text-generation-webui v2.0 with API one-click' with this link: https://runpod.io/console/deploy?template=bzhe0deyqj&ref=2vdt3dn9
+You can deploy the new template called **text-generation-webui v2.0 with API one-click** with this link: https://runpod.io/console/deploy?template=bzhe0deyqj&ref=2vdt3dn9
 
 
 # Text-generation-webui Docker templates
